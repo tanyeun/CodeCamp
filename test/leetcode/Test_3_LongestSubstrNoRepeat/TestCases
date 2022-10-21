@@ -1,0 +1,11 @@
+- Case 1
+Input: s = "abcabcbb"
+Output: 3
+
+- Case 2
+Input: s = "bbbbb"
+Output: 1
+
+- Case 3
+Input: s = "pwwkew"
+Output: 3
