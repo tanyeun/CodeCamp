@@ -1,11 +1,15 @@
-- Case 1
+x Case 1
 Input: s = "abcabcbb"
 Output: 3
 
-- Case 2
+x Case 2
 Input: s = "bbbbb"
 Output: 1
 
-- Case 3
+x Case 3
 Input: s = "pwwkew"
 Output: 3
+
+- Case 4
+Input: s = " "
+Output: 1
