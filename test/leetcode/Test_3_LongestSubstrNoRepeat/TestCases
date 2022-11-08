@@ -10,6 +10,6 @@ x Case 3
 Input: s = "pwwkew"
 Output: 3
 
-- Case 4
+x Case 4
 Input: s = " "
 Output: 1

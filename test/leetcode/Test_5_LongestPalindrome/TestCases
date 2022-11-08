@@ -1,0 +1,8 @@
+x Case 1
+Input: s = "babad"
+Output: "bab"
+
+- Case 2
+Input: s = "cbbd"
+Output: "bb"
+
