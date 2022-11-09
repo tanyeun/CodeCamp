@@ -1,0 +1,11 @@
+x Case 1
+Input: flowerbed = [1,0,0,0,1], n = 1
+Output: true
+
+x Case 2
+Input: flowerbed = [1,0,0,0,1], n = 2
+Output: false
+
+x Case 3
+Input: flowerbed = [0,0,1,0,1], n = 1
+Output: true
