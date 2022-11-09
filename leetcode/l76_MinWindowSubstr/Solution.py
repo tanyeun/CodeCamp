@@ -6,6 +6,8 @@ class Solution:
         hashmap = [0]*128  # 128 ascii values
         in_t = [False]*128
 
+        # ord('A') = 65
+        # ord('a') = 97
         for i in range(0, len(t)):
             hashmap[ord(t[i])] += 1
             in_t[ord(t[i])] = True
