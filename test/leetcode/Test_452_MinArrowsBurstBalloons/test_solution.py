@@ -1,22 +1,28 @@
-from leetcode.l167_TwoSum2.Solution import Solution
+from leetcode.l88_MergeSortedArray.Solution import Solution
 
 
 def test_case1():
-    numbers = [2, 7, 11, 15]
-    target = 9
-    output = Solution.two_sum(numbers, target)
-    assert output == [1, 2]
+    nums1 = [1, 2, 3, 0, 0, 0]
+    m = 3
+    nums2 = [2, 5, 6]
+    n = 3
+    Solution.merge(nums1, m, nums2, n)
+    assert nums1 == [1, 2, 2, 3, 5, 6]
 
 
 def test_case2():
-    numbers = [2, 3, 4]
-    target = 6
-    output = Solution.two_sum(numbers, target)
-    assert output == [1, 3]
+    nums1 = [1]
+    m = 1
+    nums2 = []
+    n = 0
+    Solution.merge(nums1, m, nums2, n)
+    assert nums1 == [1]
 
 
 def test_case3():
-    numbers = [-1, 0]
-    target = -1
-    output = Solution.two_sum(numbers, target)
-    assert output == [1, 2]
+    nums1 = [0]
+    m = 0
+    nums2 = [1]
+    n = 1
+    Solution.merge(nums1, m, nums2, n)
+    assert nums1 == [1]
