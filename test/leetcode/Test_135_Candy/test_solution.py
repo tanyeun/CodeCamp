@@ -1,6 +1,7 @@
-from leetcode.l135_Candy.Solution1 import Solution
+from leetcode.l135_Candy.Solution import Solution
+from test.utilities import timeit
 
-
+@timeit
 def test_case1():
     ratings = [1, 0, 2]
     output = Solution.candy(ratings)

@@ -25,6 +25,7 @@ Case 1:
   把遞減的stack清空，用[max(1, stack[-1]) + 1][2]取代
 """
 
+# time = 0.04
 class Solution:
     @staticmethod
     def helper(ans, stack):

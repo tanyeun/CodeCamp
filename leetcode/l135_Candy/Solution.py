@@ -1,7 +1,7 @@
 from typing import List
 
 
-# this solution is too slow based on Leetcode data on 11/8/2022
+# time = 0.025
 class Solution:
     @staticmethod
     def candy(ratings: List[int]) -> int:
