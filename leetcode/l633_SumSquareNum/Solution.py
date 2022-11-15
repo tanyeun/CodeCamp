@@ -6,7 +6,7 @@ of first n odd positive integers.
 n^2 = 1 + 3 + 5 + ... + 2*n-1
 """
 
-
+# this solution is too slow based on Leetcode Judge
 class Solution:
     @staticmethod
     def judge_square_sum(c: int) -> bool:
