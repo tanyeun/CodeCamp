@@ -1,5 +1,4 @@
 from leetcode.l46_Permutation.Solution import Solution
-from collections import Counter
 
 def test_case1():
     nums = [1, 2, 3]
