@@ -1,5 +1,4 @@
-from leetcode.l23_MergeKList.Solution import Solution
-from leetcode.l23_MergeKList.Solution import ListNode
+from leetcode.l23_MergeKList.Solution1 import Solution
 from test.utilities import construct_linked_list
 from test.utilities import linked_list_identical
 
