@@ -2,6 +2,8 @@ from typing import List
 
 
 # 單調棧 monotonic stack
+# T: O(N)
+# S: O(N)
 class Solution:
     @staticmethod
     def daily_temperatures(temperatures: List[int]) -> List[int]:

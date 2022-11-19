@@ -4,6 +4,7 @@ import heapq
 节点的值
 
 heapq is a binary heap, with O(log n) push and O(log n) pop
+https://github.com/python/cpython/blob/3.8/Lib/heapq.py
 """
 
 
