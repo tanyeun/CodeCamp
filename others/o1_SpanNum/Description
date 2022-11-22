@@ -1,0 +1,10 @@
+Input 0s and 1s
+如果input是0，output就是0
+如果input是1，output為1加上後面有幾個零
+
+Example:
+
+Input = [0, 1, 0, 0, 1, 1, 0, 0, 0, 0]
+Output = [0, 3, 0, 0, 1, 5, 0, 0, 0, 0]
+
+T O(N^2) is not acceptable
