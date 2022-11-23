@@ -1,0 +1,20 @@
+index = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+tree =  [0, 0, 1, 1, 0, 4, 5, 5, 7, 5]
+data =  [0, 0, 10, 20, 0, 0, 0, 30, 40, 50]
+tree[index] = parent
+tree[0] = 0 is the root of the tree
+tree[3] = 1 means the parent of node 3 is node 1
+data[3] = 20 means the data of node 3 is 20
+
+                   0[0]
+                  /    \
+                4[0]   1[0]
+               /      /    \
+              5[0]   2[10]  3[20]
+           /   |   \
+         6[0] 7[30] 9[50]
+               |
+              8[40]
+
+output = [ 150, 30,  10, 20, 120, 120, 0, 80, 50, 40]
+output[i] = j means the sum of all node under node i is j
