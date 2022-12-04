@@ -15,6 +15,8 @@ class ListNode:
 
 
 def construct_linked_list(ll: List):
+    if len(ll) == 0:
+        return None
     head = ListNode(ll[0])
     tmp = head
     for i in range(1, len(ll)):
