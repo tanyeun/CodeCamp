@@ -1,0 +1,11 @@
+Fibonacci sequence:
+ F0 = 0
+ F1 = 1
+ F1 = 1
+ Fn = Fn-1 + Fn-2
+ n is positive interger
+
+ 0, 1, 1, 2, 3, 5, 8, 13, ...
+
+ input n, output Fn
+
