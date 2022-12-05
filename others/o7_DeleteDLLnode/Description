@@ -1,0 +1,12 @@
+Remove the first element found given a search key from
+a doubly linked list
+
+Example:
+None<-1<->3<->5<->7<->9->None represented by [1,3,5,7,9]
+search for 5
+return [1,3,7,9]
+
+Example:
+1<->1<->5<->5<->9 represented by [1,1,5,5,9]
+search for 5
+return [1,1,5,9]

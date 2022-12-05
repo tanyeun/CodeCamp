@@ -2,6 +2,7 @@ import time
 from typing import List
 import matplotlib.pyplot as plt
 
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -14,6 +15,12 @@ class ListNode:
         return self.val > other.val
 
 
+class DListNode:
+    def __init__(self, val=0, next=None, prev=None):
+        self.val = val
+        self.next = next
+        self.prev = prev
+
 def construct_linked_list(ll: List):
     if len(ll) == 0:
         return None
@@ -24,6 +31,18 @@ def construct_linked_list(ll: List):
         tmp = tmp.next
     return head
 
+
+def construct_double_linked_list(ll: List):
+    if len(ll) == 0:
+        return None
+    head = DListNode(ll[0])
+    tmp = head
+    for i in range(1, len(ll)):
+        tmp.next = DListNode(ll[i])
+        prev = tmp
+        tmp = tmp.next
+        tmp.prev = prev
+    return head
 
 def linked_list_identical(a: ListNode, b: ListNode):
     while a is not None and b is not None:
@@ -40,6 +59,26 @@ def linked_list_identical(a: ListNode, b: ListNode):
     # If linked lists are identical,
     # then 'a' and 'b' must be null
     # at this point.
+    return a is None and b is None
+
+
+def double_linked_list_identical(a: ListNode, b: ListNode):
+    while a is not None and b is not None:
+        if a.val != b.val:
+            return False
+        if a.next is None:
+            a_last = a
+        if b.next is None:
+            b_last = b
+        a = a.next
+        b = b.next
+    a = a_last
+    b = b_last
+    while a is not None and b is not None:
+        if a.val != b.val:
+            return False
+        a = a.prev
+        b = b.prev
     return a is None and b is None
 
 
