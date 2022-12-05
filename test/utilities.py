@@ -1,25 +1,10 @@
 import time
 from typing import List
 import matplotlib.pyplot as plt
+from datastructure.my_linkedlist import ListNode
+from datastructure.my_linkedlist import DListNode
+from datastructure.my_tree import tree_in_forest
 
-
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-    def __lt__(self, other):
-        return self.val < other.val
-
-    def __gt__(self, other):
-        return self.val > other.val
-
-
-class DListNode:
-    def __init__(self, val=0, next=None, prev=None):
-        self.val = val
-        self.next = next
-        self.prev = prev
 
 def construct_linked_list(ll: List):
     if len(ll) == 0:
@@ -43,6 +28,7 @@ def construct_double_linked_list(ll: List):
         tmp = tmp.next
         tmp.prev = prev
     return head
+
 
 def linked_list_identical(a: ListNode, b: ListNode):
     while a is not None and b is not None:
@@ -91,6 +77,18 @@ def pair_equal_non_order(pair1, pair2):
         return False
 
 
+def forest_equal_non_order(forest1, forest2):
+    if len(forest1) != len(forest2):
+        return False
+    for ff in forest1:
+        if not tree_in_forest(ff, forest2):
+            return False
+    for ff in forest2:
+        if not tree_in_forest(ff, forest1):
+            return False
+    return True
+
+
 def plot_2d_list(points):
     for i in range(len(points)):
         for j in range(i + 1, len(points)):
@@ -123,6 +121,7 @@ def plot_2d_list(points):
                            (points[j][0], points[j][1]), color=color)
 
     plt.show()
+
 
 def timeit(func):
     """

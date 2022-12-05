@@ -22,6 +22,24 @@ def deserialize(string):
     return root
 
 
+def tree_identical(root1, root2):
+    while root1 and root2:
+        if root1.val == root2.val:
+            return tree_identical(root1.left, root2.left) and \
+                   tree_identical(root1.right, root2.right)
+        else:
+            return False
+    return True
+
+
+def tree_in_forest(tree, forest):
+    in_forest = False
+    for tt in forest:
+        if tree_identical(tt, tree):
+            in_forest = True
+    return in_forest
+
+
 def drawtree(root):
     def height(root):
         return 1 + max(height(root.left), height(root.right)) if root else -1
@@ -54,4 +72,11 @@ def drawtree(root):
 if __name__ == '__main__':
     #drawtree(deserialize('[1,2,3,null,null,4,null,null,5]'))
     #drawtree(deserialize('[2,1,3,0,7,9,1,2,null,1,0,null,null,8,8,null,null,null,null,7]'))
-    drawtree(deserialize('[10,5,-3,3,2,null,11,3,-2,null,1]'))
+    #drawtree(deserialize('[6]'))
+    t1 = deserialize('[1,2,3]')
+    t2 = deserialize('[1,2,6]')
+    t3 = deserialize('[2,6]')
+    print(tree_identical(t1, t2))
+
+    print(tree_in_forest(t1, [t1, t2]))
+    print(tree_in_forest(t3, [t1, t2]))
