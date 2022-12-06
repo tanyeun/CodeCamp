@@ -24,6 +24,16 @@ def test_case3():
     output = Solution.fib(n)
     assert output == 832040
 
+
+def test_case4():
+    n = 8
+    output = Solution.fib(n)
+    seq = Solution.fib_seq(n)
+    print(seq)
+    print(sum(seq))
+    assert output == 21
+
+
 # Sol3: 0.0003264000406488776 / 10000
 # Sol2: 0.0003208999987691641 / 10000
 # Sol1: 0.00031999999191612005  / 10000 iterations
